@@ -27,6 +27,7 @@
   "dependencies": {
     "firebase-tools": "^3.0.3",
     "material-ui": "^0.15.1",
-    "react": "^15.1.0"
+    "react": "^15.1.0",
+    "webpack": "^1.13.1"
   }
 }
