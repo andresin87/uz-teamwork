@@ -1,0 +1,27 @@
+{
+  "name": "uz-teamwork",
+  "version": "0.0.1",
+  "description": "uz-teamwork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresin87/uz-teamwork.git"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "es2015",
+    "javascript",
+    "webpack",
+    "firebase"
+  ],
+  "author": "@andersin87",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresin87/uz-teamwork/issues"
+  },
+  "homepage": "https://github.com/andresin87/uz-teamwork#readme"
+}
