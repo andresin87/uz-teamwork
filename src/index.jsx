@@ -6,14 +6,16 @@ import ReactDom from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import ToolbarExamplesSimple from './components';
+import {HeaderApp} from './components';
 
 class App extends React.Component {
   render () {
     return (
-      <MuiThemeProvider>
-        <ToolbarExamplesSimple/>
-      </MuiThemeProvider>
+      <div>
+        <MuiThemeProvider>
+          <HeaderApp/>
+        </MuiThemeProvider>
+      </div>
     );
   }
 }
