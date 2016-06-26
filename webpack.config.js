@@ -12,12 +12,17 @@ var config = {
         test : /\.jsx?/,
         include : APP_DIR,
         loader : 'babel'
+      },
+      {
+        test: /\.css?$/,
+        loaders: [ 'style', 'raw' ],
+        include: path.resolve(__dirname, '../')
       }
     ]
   },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '/assets/js/bundle.js'
   }
 };
 

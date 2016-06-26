@@ -3,3 +3,5 @@
 /dist/*.js
 /dist/*.js.map
 .DS_Store
+src/components/
+dist/assets/js/
