@@ -15,9 +15,21 @@ var config = {
         loader : 'babel'
       },
       {
+        test: /\.css$/,
+        loader: 'style!css?modules',
+        include: /flexboxgrid/,
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css!postcss',
+        include: path.join(__dirname, 'node_modules'), // this also includes flexboxgrid
+        exclude: /flexboxgrid/, // so we are excluding it
+      },
+      {
         test: /\.css?$/,
         loaders: [ 'style', 'raw' ],
-        include: path.resolve(__dirname, '../')
+        include: path.resolve(__dirname, '../'),
+        exclude: path.join(__dirname, 'node_modules')
       },
       {
         test: /\.(jpg|png)$/,
@@ -28,6 +40,10 @@ var config = {
         test: /\.svg$/,
         loader: 'file',
         include: IMG_DIR
+      },
+      {
+        test: /masonry|imagesloaded|fizzy\-ui\-utils|desandro\-|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
+        loader: 'imports?define=>false&this=>window'
       }
     ]
   },

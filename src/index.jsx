@@ -9,6 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {HeaderApp, Gallery} from './components';
 
 class App extends React.Component {
+  
   render () {
     return (
       <div>
