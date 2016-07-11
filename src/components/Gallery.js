@@ -51,7 +51,7 @@ export default class Gallery extends React.Component {
   render() {
     console.log(this.props.elements);
     console.log(this.state.list);
-    var childElements = this.props.elements.map(function(element){
+    var childElements = this.state.list.map(function(element){
       return (
         <Col key={element.key} xs={6} sm={6} md={4} lg={3}>
           <Card>
@@ -61,9 +61,9 @@ export default class Gallery extends React.Component {
               <img src="http://lorempixel.com/600/337/nature/" />
             </CardMedia>
             <CardHeader
-              title="URL Avatar"
-              subtitle="Subtitle"
-              avatar="http://lorempixel.com/100/100/nature/"
+              title={element.name}
+              subtitle={element.surnames}
+              avatar={element.src}
             />
             <CardTitle title="Card title" subtitle="Card subtitle" />
             <CardText>
@@ -92,7 +92,7 @@ export default class Gallery extends React.Component {
               disableImagesLoaded={false} // default false
               updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
             >
-              {this.state.loading === true ? <h3> LOADING... </h3> : {childElements}}
+              {this.state.loading === true ? <h3> LOADING... </h3> : ((this.state.list) ? ( {childElements} ) : <h3>EMPTY</h3>)}
             </Masonry>
           </Paper>
         </Row>
